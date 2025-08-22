@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { FaLinkedinIn, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Home() {
   return (
@@ -159,9 +161,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Footer */}
+      {/* 7. Footer Section */}
       <footer className={styles.footer}>
-        {/* Footer content will go here */}
+        <div className={styles.footerContent}>
+          {/* Logo y redes sociales */}
+          <div className={styles.footerBrand}>
+            <Image
+              src="/logotipo_horizontal.png"
+              alt="Bloomit Logo"
+              width={236}
+              height={100}
+              className={styles.footerLogo}
+            />
+            <div className={styles.socialSection}>
+              <p className={styles.followText}>Follow us on:</p>
+              <div className={styles.socialIcons}>
+                <a href="#" className={styles.socialIcon}>
+                  <FaLinkedinIn />
+                </a>
+                <a href="#" className={styles.socialIcon}>
+                  <FaXTwitter />
+                </a>
+                <a href="#" className={styles.socialIcon}>
+                  <FaInstagram />
+                </a>
+                <a href="#" className={styles.socialIcon}>
+                  <FaTiktok />
+                </a>
+                <a href="#" className={styles.socialIcon}>
+                  <FaYoutube />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Columnas de enlaces */}
+          <div className={styles.footerColumns}>
+            <div className={styles.footerColumn}>
+              <h4 className={styles.columnTitle}>Services</h4>
+              <ul className={styles.columnLinks}>
+                <li><a href="#">Online Store</a></li>
+                <li><a href="#">Digital Management</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+              </ul>
+            </div>
+
+            <div className={styles.footerColumn}>
+              <h4 className={styles.columnTitle}>Company</h4>
+              <ul className={styles.columnLinks}>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+
+            <div className={styles.footerColumn}>
+              <h4 className={styles.columnTitle}>Legal</h4>
+              <ul className={styles.columnLinks}>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Línea divisoria */}
+        <div className={styles.footerDivider}></div>
+
+        {/* Copyright */}
+        <div className={styles.footerBottom}>
+          <p className={styles.copyright}>© 2025 Bloomit. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );

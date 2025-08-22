@@ -724,45 +724,126 @@
   }
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
-  padding: 3rem 2rem 2rem;
-  background-color: var(--color-secondary);
-  color: white;
+  background-color: var(--color-background-dark);
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header {
-    padding: 0.75rem 1rem;
-  }
-  
-  .headerContent {
-    gap: 1rem;
-  }
-  
-  .logo img {
-    max-height: 35px; /* Tamaño reducido para móviles */
-  }
-  
-  .headerButton {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .hero,
-  .vslVideo,
-  .onboardingRoadmap,
-  .ctaSection,
-  .bloomitPlatforms,
-  .desktools {
-    padding: 2rem 1rem;
-  }
-  
-  .footer {
-    padding: 2rem 1rem 1rem;
-  }
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
 }
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footerLogo {
+  filter: brightness(0) invert(1);
+}
+
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.followText {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #333333;
+  border-radius: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--color-primary);
+}
+
+.footerColumns {
+  display: flex;
+  gap: 6rem; /* Aumentado de 4rem a 6rem para mayor separación */
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 150px; /* Ancho mínimo para mejor distribución */
+}
+
+.columnTitle {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  margin: 0;
+}
+
+.columnLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.columnLinks a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.columnLinks a:hover {
+  color: var(--color-primary);
+}
+
+.footerDivider {
+  max-width: 1200px;
+  margin: 3rem auto 2rem;
+  height: 1px;
+  background-color: #333333;
+}
+
+.footerBottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright {
+  color: #cccccc;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
 
 /* Clases para estilos específicos del hero - Solo modifican propiedades específicas */
 /* Versiones mejoradas que solo modifican propiedades específicas */
