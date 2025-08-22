@@ -10,11 +10,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1rem 2rem;
-  background-color: var(--color-background);
-  backdrop-filter: blur(10px);
+  padding: .3rem 4rem;
+  background-color: var(--color-background-transparent); 
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-bottom: 0.5px solid #979797;
   transition: all 0.3s ease;
 }
 
@@ -34,9 +34,8 @@
 }
 
 .logo img {
+  width: 11.5rem;
   height: auto;
-  max-height: 70px; /* Aumentado para acomodar mejor el logotipo */
-  width: auto;
 }
 
 /* Botón del header */
@@ -46,7 +45,7 @@
   border: none;
   border-radius: 10px;
   padding: 0.75rem 1.5rem;
-  font-size: var(--font-size-h5);
+  font-size: var(--font-size-body);
   font-weight: var(--font-weight-medium);
   font-family: var(--font-family);
   cursor: pointer;
@@ -63,10 +62,196 @@
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  padding: 2rem;
+  padding: 2rem 0 2rem 5rem; /* Sin padding derecho */
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.heroTitle {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-font-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-font-secondary);
+  line-height: 1.2;
+}
+
+.heroDescription {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-font-secondary);
+  margin: 2rem 0;
+  line-height: 1.6;
+  max-width: 50%;
+}
+
+.heroButton {
+  background-color: var(--color-primary);
+  color: var(--color-font-primary-dark);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.heroButton:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 194, 244, 0.3);
+}
+
+.quickly {
+  color: var(--color-primary) !important;
+}
+
+.confidently {
+  color: var(--color-primary);
+}
+
+.handle_the_rest {
+  color: var(--color-primary);
+}
+
+.handle_the_rest {
+  color: var(--color-primary);
+}
+
+.bloomit_ia {
+  color: var(--color-primary);
+}
+
+.mentored_video_recording_app {
+  color: var(--color-primary);
+}
+
+.completely_free {
+  color: var(--color-primary);
+}
+
+/* Hero illustration */
+.heroIllustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+}
+
+.heroIllustration img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Responsive design for hero section */
+@media (min-width: 480px) {
+  .heroIllustration {
+  top: 0;
+  }
+
+  .heroIllustration img {
+    width: 1000px;
+    height: 1000px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo img {
+  width: 6.5rem;
+  }
+
+  .heroIllustration {
+  top: 1%;
+  }
+
+  .heroIllustration img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+    .logo img {
+  width: 9rem;
+  }
+
+  .heroIllustration {
+  top: 2%;
+  }
+
+  .heroIllustration img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logo img {
+  width: 11.5rem;
+  }
+
+  .heroIllustration {
+  top: 4%;
+  }
+
+  .heroIllustration img {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+@media (min-width: 1920px) {
+    .logo img {
+  width: 14rem;
+  }
+
+  .heroIllustration {
+  top: 6%;
+  }
+
+  .heroIllustration img {
+    width: 55rem;
+    height: 55rem;
+  }
+
+  .heroTitle {
+  line-height: 1.4;
+  }
+
+  .heroSubtitle {
+  line-height: 1.4;
+  }
+
+  .heroDescription {
+  line-height: 1.8;
+  }
 }
 
 /* VSL Video Section */
@@ -141,13 +326,52 @@
   }
 }
 
-/* También elimina la regla de modo oscuro para mantener el header blanco */
-/* Comentado para mantener el header siempre blanco */
-/*
-@media (prefers-color-scheme: dark) {
-  .header {
-    background-color: rgba(0, 0, 0, 0.9);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  }
+/* Clases para estilos específicos del hero - Solo modifican propiedades específicas */
+/* Versiones mejoradas que solo modifican propiedades específicas */
+.primaryColor {
+  color: var(--color-primary) !important;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-family: inherit;
 }
-*/
+
+.secondaryColor {
+  color: var(--color-secondary) !important;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.fontPrimaryColor {
+  color: var(--color-font-primary) !important;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.boldText {
+  font-weight: var(--font-weight-bold) !important;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.primaryBold {
+  color: var(--color-primary) !important;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.secondaryBold {
+  color: var(--color-secondary) !important;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}

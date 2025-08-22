@@ -27,7 +27,30 @@ export default function Home() {
 
       {/* 1. Hero Section */}
       <section className={styles.hero}>
-        {/* Hero content will go here */}
+        <div className={styles.heroIllustration}>
+          <Image
+            src="/illustrations/hero.png"
+            alt="Hero illustration"
+            width={640}
+            height={640}
+            priority
+          />
+        </div>
+        <div className={styles.heroContentContainer}>
+            <h1 className={styles.heroTitle}>
+              Launch <span className={styles.primaryColor}>quickly</span> and <span className={styles.secondaryColor}>Confidently</span>
+            </h1>
+            <h2 className={styles.heroSubtitle}>Focus on what you do best,</h2>
+            <h2 className={styles.heroSubtitle}>
+              we <span className={styles.fontPrimaryColor}>handle the rest</span>
+            </h2>
+            <p className={styles.heroDescription}>
+              <span className={styles.primaryBold}>Bloomit AI</span> creates your personalized marketing plan, strategy, brand identity, and content workflow — and gives you a <span className={styles.boldText}>mentored video recording app</span> to produce content and sell directly through a customized eCommerce store with dashboard. All of this, <span className={styles.secondaryBold}>completely free.</span>
+            </p>
+            <button className={styles.heroButton}>
+              LAUNCH YOUR BUSINESS TODAY!
+            </button>
+        </div>
       </section>
 
       {/* 2. VSL Video Section */}
