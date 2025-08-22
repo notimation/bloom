@@ -89,7 +89,15 @@ export default function Home() {
 
       {/* 3. Onboarding Roadmap Section */}
       <section className={styles.onboardingRoadmap}>
-        {/* Onboarding roadmap content will go here */}
+        <div className={styles.roadmapImageContainer}>
+          <Image
+            src="/onboarding_roadmap.png"
+            alt="Onboarding Roadmap"
+            width={1440}
+            height={1641}
+            className={styles.roadmapImage}
+          />
+        </div>
       </section>
 
       {/* 4. CTA Section */}
