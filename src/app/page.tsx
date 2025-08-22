@@ -102,7 +102,21 @@ export default function Home() {
 
       {/* 4. CTA Section */}
       <section className={styles.ctaSection}>
-        {/* CTA content will go here */}
+        <div className={styles.ctaContent}>
+          <div className={styles.ctaTextContainer}>
+            <h3 className={styles.ctaTitle}>Ready to launch your business?</h3>
+            <h5 className={styles.ctaSubtitle}>Start your journey to a new life today</h5>
+          </div>
+          
+          <div className={styles.ctaButtonContainer}>
+            <button className={styles.ctaButton}>
+              START TODAY!
+            </button>
+            <p className={styles.ctaDisclaimer}>No commitment • Support included</p>
+          </div>
+          
+          
+        </div>
       </section>
 
       {/* 5. Bloomit Platforms Section */}
