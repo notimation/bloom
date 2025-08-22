@@ -1,9 +1,17 @@
+'use client';
 import Image from "next/image";
 import styles from "./page.module.css";
 import { FaLinkedinIn, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { useState } from 'react';
 
 export default function Home() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handleVideoClick = () => {
+    setShowVideo(true);
+  };
+
   return (
     <div className={styles.container}>
       {/* Header flotante */}
@@ -77,15 +85,28 @@ export default function Home() {
           />
         </div>
         
-        {/* Video thumbnail centrado */}
+        {/* Video thumbnail centrado o iframe de Vimeo */}
         <div className={styles.vslVideoContainer}>
-          <Image
-            src="/video_thumnail.png"
-            alt="Video thumbnail"
-            width={1056}
-            height={594}
-            className={styles.vslVideoThumbnail}
-          />
+          {!showVideo ? (
+            <Image
+              src="/video_thumnail.png"
+              alt="Video thumbnail"
+              width={1056}
+              height={594}
+              className={styles.vslVideoThumbnail}
+              onClick={handleVideoClick}
+            />
+          ) : (
+            <iframe
+              src="https://player.vimeo.com/video/1110327162?autoplay=1&title=0&byline=0&portrait=0"
+              width="1056"
+              height="594"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className={styles.vslVideoPlayer}
+            ></iframe>
+          )}
         </div>
       </section>
 

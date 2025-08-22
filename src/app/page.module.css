@@ -281,6 +281,16 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
+.vslVideoPlayer {
+  width: 1056px;
+  height: 594px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
+  object-fit: cover; /* Cambiado de contain a cover para mejor ajuste */
+}
+
 /* Responsive design for hero section */
 @media (min-width: 1024px) {
   .vslVideo {
@@ -308,6 +318,11 @@
   .vslVideoThumbnail {
     height: 30rem;
     width: auto;
+  }
+  
+  .vslVideoPlayer {
+    height: 30rem;
+    width: 53.33rem; /* Mantiene la proporción 1056/594 * 30rem */
   }
 }
 
@@ -338,7 +353,11 @@
     height: 33rem;
     width: auto;
   }
-
+  
+  .vslVideoPlayer {
+    height: 33rem;
+    width: 58.67rem; /* Mantiene la proporción 1056/594 * 33rem */
+  }
 }
 
 @media (min-width: 1920px) {
@@ -367,6 +386,11 @@
   .vslVideoThumbnail {
     height: 44rem;
     width: auto;
+  }
+  
+  .vslVideoPlayer {
+    height: 44rem;
+    width: 78.22rem; /* Mantiene la proporción 1056/594 * 44rem */
   }
 }
 
