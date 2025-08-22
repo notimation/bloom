@@ -55,7 +55,36 @@ export default function Home() {
 
       {/* 2. VSL Video Section */}
       <section className={styles.vslVideo}>
-        {/* VSL video content will go here */}
+        {/* Ilustración izquierda */}
+        <div className={styles.vslLeftIllustration}>
+          <Image
+            src="/illustrations/video_left.png"
+            alt="Video left illustration"
+            width={385}
+            height={540}
+          />
+        </div>
+        
+        {/* Ilustración derecha */}
+        <div className={styles.vslRightIllustration}>
+          <Image
+            src="/illustrations/video_right.png"
+            alt="Video right illustration"
+            width={421}
+            height={540}
+          />
+        </div>
+        
+        {/* Video thumbnail centrado */}
+        <div className={styles.vslVideoContainer}>
+          <Image
+            src="/video_thumnail.png"
+            alt="Video thumbnail"
+            width={1056}
+            height={594}
+            className={styles.vslVideoThumbnail}
+          />
+        </div>
       </section>
 
       {/* 3. Onboarding Roadmap Section */}
