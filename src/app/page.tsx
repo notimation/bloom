@@ -143,8 +143,20 @@ export default function Home() {
       </section>
 
       {/* 6. Desktools Section */}
-      <section className={styles.desktools}>
-        {/* Desktools content will go here */}
+      <section className={styles.desktoolsSection}>
+        <div className={styles.desktoolsContent}>
+          <h1 className={styles.desktoolsTitle}>Desktools</h1>
+          
+          <div className={styles.desktoolsImageContainer}>
+            <Image
+              src="/desktools.png"
+              alt="Desktools Features"
+              width={2692}
+              height={2051}
+              className={styles.desktoolsImage}
+            />
+          </div>
+        </div>
       </section>
 
       {/* 7. Footer */}

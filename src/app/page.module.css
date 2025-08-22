@@ -650,9 +650,78 @@
 }
 
 /* Desktools Section */
-.desktools {
-  padding: 4rem 2rem;
-  background-color: #f8f9fa;
+.desktoolsSection {
+  padding: 4rem 0;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktoolsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 2rem;
+  gap: 5rem;
+  width: 100%;
+}
+
+.desktoolsTitle {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-font-secondary);
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.desktoolsImageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.desktoolsImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive design para Desktools Section */
+@media (min-width: 1024px) {
+  .desktoolsSection {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .desktoolsContent {
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .desktoolsSection {
+    padding: 2rem 2rem;
+  }
+
+  .desktoolsContent {
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .desktoolsSection {
+    padding: 2.5rem 2rem;
+  }
+
+  .desktoolsContent {
+    gap: 6rem;
+  }
 }
 
 /* Footer */
