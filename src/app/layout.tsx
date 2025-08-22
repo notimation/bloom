@@ -11,8 +11,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "My Business Landing",
-  description: "Landing page for My Business",
+  title: "Bloomit",
+  description: "Bloomit IA",
 };
 
 export default function RootLayout({
