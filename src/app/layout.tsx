@@ -6,7 +6,7 @@ import "./globals.css";
 // Import Roboto font with weights 400, 500, 700
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["200", "300", "400", "500", "700"],
   variable: "--font-roboto", // optional if you want to use as a CSS variable
 });
 
