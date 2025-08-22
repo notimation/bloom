@@ -548,8 +548,105 @@
 
 /* Bloomit Platforms Section */
 .bloomitPlatforms {
-  padding: 4rem 2rem;
+  padding: 6rem 0rem;
   background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platformsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  width: 100%;
+  text-align: center;
+}
+
+.platformsContentText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.platformsTitle {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.platformsTitle .primaryColor {
+  color: var(--color-primary) !important;
+}
+
+.platformsTitle .secondaryColor {
+  color: var(--color-font-secondary) !important;
+}
+
+.platformsSubtitle {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-font-secondary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.platformsImageContainer {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.platformsImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive design para Platforms Section */
+@media (min-width: 1024px) {
+  .bloomitPlatforms {
+    padding: 4rem 0rem;
+  }
+
+  .platformsContent {
+    gap: 4.5rem;
+  }
+
+  .platformsContentText {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bloomitPlatforms {
+    padding: 6rem 0rem;
+  }
+
+  .platformsContent {
+    gap: 6rem;
+  }
+
+  .platformsContentText {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .bloomitPlatforms {
+    padding: 8rem 0rem;
+  }
+
+  .platformsContent {
+    gap: 9rem;
+  }
+
+  .platformsContentText {
+    gap: 3rem;
+  }
 }
 
 /* Desktools Section */

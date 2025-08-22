@@ -121,7 +121,25 @@ export default function Home() {
 
       {/* 5. Bloomit Platforms Section */}
       <section className={styles.bloomitPlatforms}>
-        {/* Bloomit platforms content will go here */}
+        <div className={styles.platformsContent}>
+          <div className={styles.platformsContentText}>
+            <h1 className={styles.platformsTitle}>
+              <span className={styles.primaryColor}>Bloomit</span>{' '}
+              <span className={styles.secondaryColor}>Platforms</span>
+            </h1>
+            
+            <h4 className={styles.platformsSubtitle}>¿What features does it offer?</h4>
+          </div>
+          <div className={styles.platformsImageContainer}>
+            <Image
+              src="/platform_mobile.png"
+              alt="Bloomit Platforms Features"
+              width={2336}
+              height={2068}
+              className={styles.platformsImage}
+            />
+          </div>
+        </div>
       </section>
 
       {/* 6. Desktools Section */}
