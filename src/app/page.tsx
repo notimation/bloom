@@ -158,8 +158,8 @@ export default function Home() {
             <Image
               src="/platform_mobile.png"
               alt="Bloomit Platforms Features"
-              width={2881}
-              height={2904}
+              width={2336}
+              height={2050}
               className={styles.platformsImage}
             />
           </div>
