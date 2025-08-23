@@ -11,8 +11,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Bloomit",
-  description: "Bloomit IA",
+  title: "Bloom",
+  description: "Bloom IA",
 };
 
 export default function RootLayout({
