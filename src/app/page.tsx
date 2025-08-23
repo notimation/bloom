@@ -4,9 +4,11 @@ import styles from "./page.module.css";
 import { FaLinkedinIn, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { useState } from 'react';
+import { useTranslations } from '../hooks/useTranslations';
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
+  const { t, locale, getImageSrc } = useTranslations();
 
   const handleVideoClick = () => {
     setShowVideo(true);
@@ -30,7 +32,7 @@ export default function Home() {
           
           {/* Botón CTA */}
           <button className={styles.headerButton}>
-            LAUNCH TODAY!
+            {t.header.cta}
           </button>
         </div>
       </header>
@@ -48,17 +50,17 @@ export default function Home() {
         </div>
         <div className={styles.heroContentContainer}>
             <h1 className={styles.heroTitle}>
-              Launch <span className={styles.primaryColor}>fast</span> and <span className={styles.secondaryColor}>confidently</span>
+              {t.hero.title.launch} <span className={styles.primaryColor}>{t.hero.title.fast}</span> {t.hero.title.and} <span className={styles.secondaryColor}>{t.hero.title.confidently}</span>
             </h1>
-            <h2 className={styles.heroSubtitle}>Focus on what you do best,</h2>
+            <h2 className={styles.heroSubtitle}>{t.hero.subtitle1}</h2>
             <h2 className={styles.heroSubtitle}>
-              we <span className={styles.fontPrimaryColor}>handle the <span className={styles.primaryColor}>rest</span></span>
+              {t.hero.subtitle2} <span className={styles.fontPrimaryColor}>{t.hero.subtitle2_handle} <span className={styles.primaryColor}>{t.hero.subtitle2_rest}</span></span>
             </h2>
             <p className={styles.heroDescription}>
-              <span className={styles.primaryBold}>Bloom AI</span> instantly creates your personalized marketing plan, strategy, brand identity, and content workflow. With a <span className={styles.boldText}>mentored video recording app</span>, record guided content and sell directly through a customized <span className={styles.boldText}>eCommerce</span> store with a dashboard to manage your account — <span className={styles.secondaryBold}>all free 🎁</span>
+              <span className={styles.primaryBold}>{t.hero.bloom_ai}</span> {t.hero.description} <span className={styles.boldText}>{t.hero.description_mentored}</span>{t.hero.description_middle} <span className={styles.boldText}>{t.hero.description_ecommerce}</span> {t.hero.description_end} <span className={styles.secondaryBold}>{t.hero.description_free}</span>
             </p>
             <button className={styles.heroButton}>
-              LAUNCH YOUR BUSINESS TODAY!
+              {t.hero.cta}
             </button>
         </div>
       </section>
@@ -89,7 +91,7 @@ export default function Home() {
         <div className={styles.vslVideoContainer}>
           {!showVideo ? (
             <Image
-              src="/video_thumnail.png"
+              src={getImageSrc("/video_thumnail")}
               alt="Video thumbnail"
               width={1056}
               height={594}
@@ -114,7 +116,7 @@ export default function Home() {
       <section className={styles.onboardingRoadmap}>
         <div className={styles.roadmapImageContainer}>
           <Image
-            src="/onboarding_roadmap.png"
+            src={getImageSrc("/onboarding_roadmap")}
             alt="Onboarding Roadmap"
             width={1440}
             height={1641}
@@ -127,18 +129,16 @@ export default function Home() {
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
           <div className={styles.ctaTextContainer}>
-            <h3 className={styles.ctaTitle}>Ready to launch your business?</h3>
-            <h5 className={styles.ctaSubtitle}>Start your journey to a new life today</h5>
+            <h3 className={styles.ctaTitle}>{t.cta_section.title}</h3>
+            <h5 className={styles.ctaSubtitle}>{t.cta_section.subtitle}</h5>
           </div>
           
           <div className={styles.ctaButtonContainer}>
             <button className={styles.ctaButton}>
-              START TODAY!
+              {t.cta_section.button}
             </button>
-            <p className={styles.ctaDisclaimer}>No commitment • Support included</p>
+            <p className={styles.ctaDisclaimer}>{t.cta_section.disclaimer}</p>
           </div>
-          
-          
         </div>
       </section>
 
@@ -147,16 +147,16 @@ export default function Home() {
         <div className={styles.platformsContent}>
           <div className={styles.platformsContentText}>
             <h1 className={styles.platformsTitle}>
-              <span className={styles.secondaryColor}>Mobile</span>{' '}
-              <span className={styles.primaryColor}>Mentor</span>{' '}
-              <span className={styles.secondaryColor}>App</span>
+              <span className={styles.secondaryColor}>{t.platforms.mobile}</span>{' '}
+              <span className={styles.primaryColor}>{t.platforms.mentor}</span>{' '}
+              <span className={styles.secondaryColor}>{t.platforms.app}</span>
             </h1>
             
-            <h4 className={styles.platformsSubtitle}>Your creative director in your pocket</h4>
+            <h4 className={styles.platformsSubtitle}>{t.platforms.subtitle}</h4>
           </div>
           <div className={styles.platformsImageContainer}>
             <Image
-              src="/platform_mobile.png"
+              src={getImageSrc("/platform_mobile")}
               alt="Bloomit Platforms Features"
               width={2336}
               height={2050}
@@ -169,11 +169,11 @@ export default function Home() {
       {/* 6. Desktools Section */}
       <section className={styles.desktoolsSection}>
         <div className={styles.desktoolsContent}>
-          <h1 className={styles.desktoolsTitle}>Your <span className={styles.secondaryColor}>Ecommerce</span></h1>
+          <h1 className={styles.desktoolsTitle}>{t.desktools.title} <span className={styles.secondaryColor}>{t.desktools.ecommerce}</span></h1>
           
           <div className={styles.desktoolsImageContainer}>
             <Image
-              src="/desktools.png"
+              src={getImageSrc("/desktools")}
               alt="Desktools Features"
               width={2459}
               height={1265}
@@ -196,7 +196,7 @@ export default function Home() {
               className={styles.footerLogo}
             />
             <div className={styles.socialSection}>
-              <p className={styles.followText}>Follow us on:</p>
+              <p className={styles.followText}>{t.footer.follow}</p>
               <div className={styles.socialIcons}>
                 <a href="#" className={styles.socialIcon}>
                   <FaLinkedinIn />
@@ -220,29 +220,29 @@ export default function Home() {
           {/* Columnas de enlaces */}
           <div className={styles.footerColumns}>
             <div className={styles.footerColumn}>
-              <h4 className={styles.columnTitle}>Services</h4>
+              <h4 className={styles.columnTitle}>{t.footer.services.title}</h4>
               <ul className={styles.columnLinks}>
-                <li><a href="#">Online Store</a></li>
-                <li><a href="#">Digital Management</a></li>
-                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">{t.footer.services.online_store}</a></li>
+                <li><a href="#">{t.footer.services.digital_management}</a></li>
+                <li><a href="#">{t.footer.services.digital_marketing}</a></li>
               </ul>
             </div>
 
             <div className={styles.footerColumn}>
-              <h4 className={styles.columnTitle}>Company</h4>
+              <h4 className={styles.columnTitle}>{t.footer.company.title}</h4>
               <ul className={styles.columnLinks}>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">{t.footer.company.about}</a></li>
+                <li><a href="#">{t.footer.company.blog}</a></li>
+                <li><a href="#">{t.footer.company.contact}</a></li>
               </ul>
             </div>
 
             <div className={styles.footerColumn}>
-              <h4 className={styles.columnTitle}>Legal</h4>
+              <h4 className={styles.columnTitle}>{t.footer.legal.title}</h4>
               <ul className={styles.columnLinks}>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Cookies</a></li>
+                <li><a href="#">{t.footer.legal.terms}</a></li>
+                <li><a href="#">{t.footer.legal.privacy}</a></li>
+                <li><a href="#">{t.footer.legal.cookies}</a></li>
               </ul>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function Home() {
 
         {/* Copyright */}
         <div className={styles.footerBottom}>
-          <p className={styles.copyright}>© 2025 Bloomit. All rights reserved.</p>
+          <p className={styles.copyright}>{t.footer.copyright}</p>
         </div>
       </footer>
     </div>
