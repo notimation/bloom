@@ -22,8 +22,8 @@ export default function Home() {
             <Image
               src="/logotipo_horizontal.png"
               alt="Bloomit"
-              width={236}
-              height={100}
+              width={203}
+              height={73}
               priority
             />
           </div>
@@ -41,21 +41,21 @@ export default function Home() {
           <Image
             src="/illustrations/hero.png"
             alt="Hero illustration"
-            width={640}
-            height={640}
+            width={635}
+            height={636}
             priority
           />
         </div>
         <div className={styles.heroContentContainer}>
             <h1 className={styles.heroTitle}>
-              Launch <span className={styles.primaryColor}>quickly</span> and <span className={styles.secondaryColor}>Confidently</span>
+              Launch <span className={styles.primaryColor}>fast</span> and <span className={styles.secondaryColor}>confidently</span>
             </h1>
             <h2 className={styles.heroSubtitle}>Focus on what you do best,</h2>
             <h2 className={styles.heroSubtitle}>
-              we <span className={styles.fontPrimaryColor}>handle the rest</span>
+              we <span className={styles.fontPrimaryColor}>handle the <span className={styles.primaryColor}>rest</span></span>
             </h2>
             <p className={styles.heroDescription}>
-              <span className={styles.primaryBold}>Bloomit AI</span> creates your personalized marketing plan, strategy, brand identity, and content workflow — and gives you a <span className={styles.boldText}>mentored video recording app</span> to produce content and sell directly through a customized eCommerce store with dashboard. All of this, <span className={styles.secondaryBold}>completely free.</span>
+              <span className={styles.primaryBold}>Bloom AI</span> instantly creates your personalized marketing plan, strategy, brand identity, and content workflow. With a <span className={styles.boldText}>mentored video recording app</span>, record guided content and sell directly through a customized <span className={styles.boldText}>eCommerce</span> store with a dashboard to manage your account — <span className={styles.secondaryBold}>all free 🎁</span>
             </p>
             <button className={styles.heroButton}>
               LAUNCH YOUR BUSINESS TODAY!
@@ -147,18 +147,19 @@ export default function Home() {
         <div className={styles.platformsContent}>
           <div className={styles.platformsContentText}>
             <h1 className={styles.platformsTitle}>
-              <span className={styles.primaryColor}>Bloomit</span>{' '}
-              <span className={styles.secondaryColor}>Platforms</span>
+              <span className={styles.secondaryColor}>Mobile</span>{' '}
+              <span className={styles.primaryColor}>Mentor</span>{' '}
+              <span className={styles.secondaryColor}>App</span>
             </h1>
             
-            <h4 className={styles.platformsSubtitle}>¿What features does it offer?</h4>
+            <h4 className={styles.platformsSubtitle}>Your creative director in your pocket</h4>
           </div>
           <div className={styles.platformsImageContainer}>
             <Image
               src="/platform_mobile.png"
               alt="Bloomit Platforms Features"
-              width={2336}
-              height={2068}
+              width={2881}
+              height={2904}
               className={styles.platformsImage}
             />
           </div>
@@ -168,14 +169,14 @@ export default function Home() {
       {/* 6. Desktools Section */}
       <section className={styles.desktoolsSection}>
         <div className={styles.desktoolsContent}>
-          <h1 className={styles.desktoolsTitle}>Desktools</h1>
+          <h1 className={styles.desktoolsTitle}>Your <span className={styles.secondaryColor}>Ecommerce</span></h1>
           
           <div className={styles.desktoolsImageContainer}>
             <Image
               src="/desktools.png"
               alt="Desktools Features"
-              width={2692}
-              height={2051}
+              width={2459}
+              height={1265}
               className={styles.desktoolsImage}
             />
           </div>
@@ -190,8 +191,8 @@ export default function Home() {
             <Image
               src="/logotipo_horizontal.png"
               alt="Bloomit Logo"
-              width={236}
-              height={100}
+              width={203}
+              height={73}
               className={styles.footerLogo}
             />
             <div className={styles.socialSection}>

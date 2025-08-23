@@ -10,7 +10,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: .3rem 4rem;
+  padding: .7rem 4rem;
   background-color: var(--color-background-transparent); 
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -702,7 +702,7 @@
 }
 
 .desktoolsImageContainer {
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -720,7 +720,7 @@
 /* Responsive design para Desktools Section */
 @media (min-width: 1024px) {
   .desktoolsSection {
-    padding: 1.5rem 1.5rem;
+    padding: 0rem 1.5rem 4.5rem 0;
   }
 
   .desktoolsContent {
@@ -730,7 +730,7 @@
 
 @media (min-width: 1440px) {
   .desktoolsSection {
-    padding: 2rem 2rem;
+    padding: 0rem 2rem 6rem 0;
   }
 
   .desktoolsContent {
@@ -740,7 +740,7 @@
 
 @media (min-width: 1920px) {
   .desktoolsSection {
-    padding: 2.5rem 2rem;
+    padding: 0rem 2rem 9rem 0;
   }
 
   .desktoolsContent {
