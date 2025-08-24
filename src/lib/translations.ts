@@ -33,6 +33,10 @@ export const translations = {
       title: "Your",
       ecommerce: "Ecommerce"
     },
+    all_in_one: {
+      title: "All-in-One",
+      rest: "Business Platform"
+    },
     cta_section: {
       title: "Ready to launch your business?",
       subtitle: "Start your journey to a new life today",
@@ -95,6 +99,10 @@ export const translations = {
     desktools: {
       title: "Tu",
       ecommerce: "Ecommerce"
+    },
+    all_in_one: {
+      title: "Todo-en-Uno",
+      rest: "Plataforma de Negocios"
     },
     cta_section: {
       title: "¿Listo para lanzar tu negocio?",

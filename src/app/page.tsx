@@ -158,8 +158,8 @@ export default function Home() {
             <Image
               src={getImageSrc("/platform_mobile")}
               alt="Bloomit Platforms Features"
-              width={2336}
-              height={2050}
+              width={2520}
+              height={1626}
               className={styles.platformsImage}
             />
           </div>
@@ -175,15 +175,35 @@ export default function Home() {
             <Image
               src={getImageSrc("/desktools")}
               alt="Desktools Features"
-              width={2459}
-              height={1265}
+              width={2762}
+              height={2128}
               className={styles.desktoolsImage}
             />
           </div>
         </div>
       </section>
 
-      {/* 7. Footer Section */}
+      {/* 7. All-in-One Business Platform Section */}
+      <section className={styles.allInOneSection}>
+        <div className={styles.allInOneContent}>
+          <h1 className={styles.allInOneTitle}>
+            <span className={styles.primaryColor}>{t.all_in_one.title}</span>{' '}
+            <span className={styles.secondaryColor}>{t.all_in_one.rest}</span>
+          </h1>
+          
+          <div className={styles.allInOneImageContainer}>
+            <Image
+              src={getImageSrc("/platforms")}
+              alt="All-in-One Business Platform"
+              width={2465}
+              height={1479}
+              className={styles.allInOneImage}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Footer Section */}
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           {/* Logo y redes sociales */}

@@ -596,7 +596,7 @@
 }
 
 .platformsTitle {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   margin: 0;
   line-height: 1.2;
@@ -692,7 +692,7 @@
 }
 
 .desktoolsTitle {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-font-secondary);
   margin: 0;
@@ -744,6 +744,88 @@
   }
 
   .desktoolsContent {
+    gap: 6rem;
+  }
+}
+
+/* All-in-One Business Platform Section */
+.allInOneSection {
+  padding: 4rem 0;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.allInOneContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 2rem;
+  gap: 5rem;
+  width: 100%;
+}
+
+.allInOneTitle {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.allInOneTitle .primaryColor {
+  color: var(--color-primary) !important;
+}
+
+.allInOneTitle .secondaryColor {
+  color: var(--color-font-secondary) !important;
+}
+
+.allInOneImageContainer {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.allInOneImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive design para All-in-One Section */
+@media (min-width: 1024px) {
+  .allInOneSection {
+    padding: 0rem 1.5rem 4.5rem 0;
+  }
+
+  .allInOneContent {
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .allInOneSection {
+    padding: 0rem 2rem 6rem 0;
+  }
+
+  .allInOneContent {
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .allInOneSection {
+    padding: 0rem 2rem 9rem 0;
+  }
+
+  .allInOneContent {
     gap: 6rem;
   }
 }
